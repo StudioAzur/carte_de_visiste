@@ -1,1 +1,3 @@
-<p>liste-employes works!</p>
+<ul *ngFor="let data of datas; odd as isOdd">
+  <li *ngIf="isOdd">{{ data.id }} {{ data.name }}</li>
+</ul>
