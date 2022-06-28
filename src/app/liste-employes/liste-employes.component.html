@@ -1,4 +1,4 @@
-<button (click)="toggle()">Cacher les utilisateurs</button>
+<button class="button-36" role="button" (click)="toggle()">Afficher/Cacher les utilisateurs</button>
 <div *ngIf="hidden" id="container">
   <div *ngFor="let data of datas; odd as isOdd">
     <div class="card" *ngIf="isOdd">
@@ -8,10 +8,18 @@
         </div>
         <div id="liste">
           <ul>
-            <li>Identifiant : <span>{{ data.id }}</span></li>
-            <li>Company : <span>{{ data.company.name }}</span></li>
-            <li>Website : <span>{{ data.website }}</span></li>
-            <li>Phone : <span>{{ data.phone }}</span></li>
+            <li>
+              Identifiant : <span>{{ data.id }}</span>
+            </li>
+            <li>
+              Company : <span>{{ data.company.name }}</span>
+            </li>
+            <li>
+              Website : <span>{{ data.website }}</span>
+            </li>
+            <li>
+              Phone : <span>{{ data.phone }}</span>
+            </li>
           </ul>
         </div>
       </div>
