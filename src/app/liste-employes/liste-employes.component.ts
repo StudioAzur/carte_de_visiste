@@ -6,11 +6,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./liste-employes.component.scss'],
 })
 export class ListeEmployesComponent implements OnInit {
-  constructor() {}
+  hidden:boolean = false;
 
-  ngOnInit(): void {}
-
-  /* query = 'https://jsonplaceholder.typicode.com/users'; */
   datas = [
     {
       "id": 1,
@@ -242,5 +239,16 @@ export class ListeEmployesComponent implements OnInit {
         "bs": "target end-to-end models"
       }
     }
-  ]
+  ];
+  
+  constructor() {}
+
+  ngOnInit(): void {}
+
+  /* query = 'https://jsonplaceholder.typicode.com/users'; */
+  
+
+  toggle(){
+    this.hidden = !this.hidden;
+  }
 }
